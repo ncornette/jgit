@@ -11,8 +11,8 @@
 package org.eclipse.jgit.internal.ketch;
 
 import java.net.URISyntaxException;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -28,7 +28,7 @@ import org.eclipse.jgit.lib.Repository;
  */
 public class KetchLeaderCache {
 	private final KetchSystem system;
-	private final ConcurrentMap<String, KetchLeader> leaders;
+	private final Map<String, KetchLeader> leaders;
 	private final Lock startLock;
 
 	/**
